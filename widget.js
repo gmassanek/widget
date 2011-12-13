@@ -10,11 +10,11 @@ script.src = 'popup.js';
 script.type = 'text/javascript';
 script.onload = script.onreadystatechange = function(){
   $(function() {
+    var widget = $("#widget");
     var unique_token = $(widget).attr('race_token');
     var popup_url = 'http://www.utellmewhen.com/widget/listener?rt=' + unique_token;
     //var popup_url = 'http://www.utellmewhen.com';
     var button = $("<input style='background: green' id='ytmw_input_button' type='submit' value='Tell Me When' />");
-    var widget = $("#widget");
     var window_name = "uTellMeWhen";
     
     widget.html(button);
